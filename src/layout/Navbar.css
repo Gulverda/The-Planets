@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.NavbarItems{
+    background: none;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-top: 22px;
+    /* background: #cf3535; */
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+    padding-bottom: 22px;
+}
+
+.navbar-logo{
+    display: flex;
+    margin-left: 32px;
+}
+
+.nav-menu{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(8, auto);
+    grid-gap: 30px;
+    text-align: center;
+    width: 80vw;
+    justify-content: end;
+    margin-right: 50px;
+}
+
+.nav-links{
+    display: flex;
+    color: rgb(255, 255, 255, 0.5);
+    font-family: League Spartan;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px; /* 227.273% */
+    letter-spacing: 1px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-links:hover{
+    color: rgb(255, 255, 255, 1);
+    transition: all ease-in 0.2s;
+}
+
+.fa-bars{
+    color: #fff;
+}
+
+.nav-links-mobile{
+    display: none;
+    color: red;
+}
+
+.menu-icon{
+    display: none;
+    z-index: 2;
+}
+
+.fa-bars,
+.fa-times{
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 960px){
+    .navbar-logo{
+        justify-self: flex-end;
+        cursor: pointer;
+        margin-left: 24px;
+    }
+}
