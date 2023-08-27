@@ -6,7 +6,7 @@
 }
 
 body{
-  height: 100vh;
+  height: 100%;
   background: #070724;
   background-image: url(layout/images/snow.png);
   background-repeat: no-repeat;
