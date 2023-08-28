@@ -118,12 +118,9 @@
 }
 
 #info{
-    align-items: center;
-    justify-content: center;
     border: 1px solid rgb(255, 255, 255, 0.2);
     width: 255px;
     height: 128px;
-    padding: 23px 0 0 23px;
 }
 
 .information p{
@@ -135,6 +132,7 @@
     line-height: 25px; /* 227.273% */
     letter-spacing: 1px;
     text-transform: uppercase;
+    margin: 23px 0 0 23px;
 }
 
 .information label{
@@ -146,4 +144,5 @@
     line-height: normal;
     letter-spacing: -1.5px;
     text-transform: uppercase;
+    margin: 0 0 0 23px;
 }
