@@ -30,7 +30,7 @@
     align-items: center;
     height: 450px;
     /* width: clamp(200px, 50%, 500px); */
-    width: auto;
+    width: 600px;
     /* background-color: aqua; */
 }
 
@@ -53,6 +53,7 @@
 .planet-card p {
     text-align: justify;
     width: 300px;
+    height: 175px;
     color: #FFF;
     font-family: League Spartan;
     font-size: 14px;
