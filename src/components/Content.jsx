@@ -16,6 +16,14 @@ import Guts4 from './images/Guts4.svg';
 import Guts5 from './images/Guts5.svg';
 import Guts6 from './images/Guts6.svg';
 import Guts7 from './images/Guts7.svg';
+import MercuryGeology from './images/Mercury-Geology.svg';
+import VenusGeology from './images/Venus-Geology.svg';
+import EarthGeology from './images/Earth-Geology.svg';
+import MarsGeology from './images/Mars-Geology.svg';
+import JupiterGeology from './images/Jupiter-Geology.svg';
+import SaturnGeology from './images/Saturn-Geology.svg';
+import UranusGeology from './images/Uranus-Geology.svg';
+import NeptuneGeology from './images/Neptune-Geology.svg';
 
 
 function Content({ selectedPlanet }) {
@@ -24,11 +32,11 @@ function Content({ selectedPlanet }) {
     const planets = [
         {
             id: 1,
-            // src: require("./Navbar/images/3rdcard1.png"),
             title: "MERCURY",
             description: "Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun's planets. Mercury is one of four terrestrial planets in the Solar System, and is a rocky body like Earth.",
             imgSrc: MercuryImage,
             imgSrc1: Guts,
+            imgSrc2: MercuryGeology,
             rotTime: "58.6 DAYS",
             revTime: "87.97 DAYS",
             radius: "2,439.7 KM",
@@ -38,11 +46,11 @@ function Content({ selectedPlanet }) {
         },
         {
             id: 2,
-            // src: require("./Navbar/images/3rdcard2.png"),
             title: "VENUS",
             description: "Venus is the second planet from the Sun. It is named after the Roman goddess of love and beauty. As the brightest natural object in Earth's night sky after the Moon, Venus can cast shadows and can be, on rare occasions, visible to the naked eye in broad daylight.",
             imgSrc: VenusImage,
             imgSrc1: Guts1,
+            imgSrc2: VenusGeology,
             rotTime: "243 DAYS",
             revTime: "224.7 DAYS",
             radius: "6,051.8 KM",
@@ -52,11 +60,11 @@ function Content({ selectedPlanet }) {
         },
         {
             id: 3,
-            // src: require("./Navbar/images/3rdcard3.png"),
             title: "EARTH",
             description: "Third planet from the Sun and the only known planet to harbor life. About 29.2% of Earth's surface is land with remaining 70.8% is covered with water. Earth's distance from the Sun, physical properties and geological history have allowed life to evolve and thrive.",
             imgSrc: EarthImage,
             imgSrc1: Guts2,
+            imgSrc2: EarthGeology,
             rotTime: "0.99 DAYS",
             revTime: "365.26 DAYS",
             radius: "6,371 KM",
@@ -66,11 +74,11 @@ function Content({ selectedPlanet }) {
         },
         {
             id: 4,
-            // src: require("./Navbar/images/3rdcard1.png"),
             title: "MARS",
             description: "Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, being larger than only Mercury. In English, Mars carries the name of the Roman god of war and is often referred to as the 'Red Planet'. ",
             imgSrc: MarsImage,
             imgSrc1: Guts3,
+            imgSrc2: MarsGeology,
             rotTime: "1.03 DAYS",
             revTime: "1.88 YEARS",
             radius: "3,389.5 KM",
@@ -80,11 +88,11 @@ function Content({ selectedPlanet }) {
         },
         {
             id: 5,
-            // src: require("./Navbar/images/3rdcard2.png"),
             title: "JUPITER",
             description: "Jupiter is the fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass two and a half times that of all the other planets in the Solar System combined, but less than one-thousandth the mass of the Sun.",
             imgSrc: JupiterImage,
             imgSrc1: Guts4,
+            imgSrc2: JupiterGeology,
             rotTime: "9.93 HOURS",
             revTime: "11.86 YEARS",
             radius: "69,911 KM",
@@ -94,11 +102,11 @@ function Content({ selectedPlanet }) {
         },
         {
             id: 6,
-            // src: require("./Navbar/images/3rdcard3.png"),
             title: "SATURN",
             description: "Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It is a gas giant with an average radius of about nine and a half times that of Earth. It only has one-eighth the average density of Earth.",
             imgSrc: SaturnImage,
             imgSrc1: Guts5,
+            imgSrc2: SaturnGeology,
             rotTime: "10.8 HOURS",
             revTime: "29.46 YEARS",
             radius: "58,232 KM",
@@ -108,11 +116,11 @@ function Content({ selectedPlanet }) {
         },
         {
             id: 7,
-            // src: require("./Navbar/images/3rdcard3.png"),
             title: "URANUS",
             description: "Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky, Uranus according to Greek mythology, was the great-grandfather of Ares. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System.",
             imgSrc: UranusImage,
             imgSrc1: Guts6,
+            imgSrc2: UranusGeology,
             rotTime: "17.2 HOURS",
             revTime: "84 YEARS",
             radius: "25,362 KM",
@@ -122,11 +130,11 @@ function Content({ selectedPlanet }) {
         },
         {
             id: 8,
-            // src: require("./Navbar/images/3rdcard3.png"),
             title: "NEPTUNE",
             description: "Neptune is the eighth and farthest-known Solar planet from the Sun. In the Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth, more massive than its near-twin Uranus.",
             imgSrc: NeptuneImage,
             imgSrc1: Guts7,
+            imgSrc2: NeptuneGeology,
             rotTime: "16.08 HOURS",
             revTime: "164.79 YEARS",
             radius: "24,622 KM",
@@ -150,8 +158,8 @@ function Content({ selectedPlanet }) {
                     {activeSection === "INTERNAL_STRUCTURE" && (
                         <img src={selectedPlanetData.imgSrc1} alt={selectedPlanetData.title} />
                     )}
-                    {activeSection === "SUFRACE-GEOLOGY" && (
-                        <img src={selectedPlanetData.imgSrc2} alt={selectedPlanetData.title} />
+                    {activeSection === "SUFRACE_GEOLOGY" && (
+                        <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
                     )}
                     </div>
                     <div className="planet-card">
@@ -159,10 +167,10 @@ function Content({ selectedPlanet }) {
                         {activeSection === "OVERVIEW" && (
                             <p>{selectedPlanetData.description}</p>
                         )}
-                        {activeSection === "INTERNAL_STRUCTURE" && (  // Corrected the parentheses here
+                        {activeSection === "INTERNAL_STRUCTURE" && (  
                             <p>{selectedPlanetData.description1}</p>
                         )}
-                        {activeSection === "SURFACE_GEOLOGY" && (  // Corrected the parentheses here
+                        {activeSection === "SURFACE_GEOLOGY" && (  
                             <p>{selectedPlanetData.description2}</p>
                         )}
                         <div className="overview-istructure-sgeology">
@@ -197,11 +205,6 @@ function Content({ selectedPlanet }) {
                     </div>
                 </div>
             </div>
-
-
-            {/* INTERNAL STRUCTURE-SECTION */}
-
-            {/* SURFACE GEOLOGY-SECTION */}
         </main>
     );
 }
