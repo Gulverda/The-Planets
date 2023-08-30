@@ -168,6 +168,7 @@ function Content({ selectedPlanet }) {
                     )}
                     </div>
                     <div className="planet-card">
+                        <div className="title-and-description">
                         <h2>{selectedPlanetData.title}</h2>
                         {activeSection === "OVERVIEW" && (
                             <p>{selectedPlanetData.description}</p>
@@ -178,6 +179,7 @@ function Content({ selectedPlanet }) {
                         {activeSection === "SURFACE_GEOLOGY" && (  
                             <p>{selectedPlanetData.description2}</p>
                         )}
+                        </div>
                         <div className="overview-istructure-sgeology">
                             <ul>
                                 <li onClick={() => setActiveSection("OVERVIEW")}><b>01</b> OVERVIEW</li>

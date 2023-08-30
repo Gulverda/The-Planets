@@ -1,8 +1,8 @@
 /* Content.css */
 .main-content{ 
-    width: 1440px;   
+    width: 1110px;   
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 125px;
 }
 
@@ -18,10 +18,11 @@
 }
 
 .planet-card {
+    display: grid;
     width: auto;
     border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
+    /* padding: 20px;
+    margin: 10px; */
 }
 
 .content-img{
@@ -30,14 +31,9 @@
     align-items: center;
     height: 450px;
     /* width: clamp(200px, 50%, 500px); */
-    width: 600px;
+    width: 100%;
     /* background-color: aqua; */
 }
-
-/* .planet-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-} */
 
 .planet-card h2 {
     color: #FFF;
@@ -88,7 +84,7 @@
     letter-spacing: 2.571px;
     text-transform: uppercase;
     cursor: pointer;
-    width: 100%;
+    width: 350px;
     height: 48px;
     text-align: justify;
     display: flex;
@@ -111,9 +107,9 @@
 }
 
 .information{
-    width: 1440px;   
+    width: 1110px;   
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-top: 125px;
     text-align: justify;
 }
@@ -161,4 +157,71 @@
     top: 50%;
     margin-left: auto; 
     margin-right: auto; 
+}
+
+@media screen and (max-width: 1100px) {
+    #info{
+        width: 230px;
+    }
+
+}
+
+@media screen and (max-width: 970px) {
+    .main-content{ 
+        width: 750px;
+    }
+
+    .content-img{   
+        width: 00px;
+    }
+
+    #info{
+        width: 164px;
+        height: 88px;
+    }
+
+    .information p{
+        font-size: 8px;
+        margin: 16px 0 0 19px;
+    }
+    
+    .information label{
+        font-size: 24px;
+        margin: 0 0 0 19px;
+    }
+
+    .planet-card{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title-and-description{
+        width: 333px;
+    }
+
+    .main-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-content img{
+        margin-top: 0;
+    }
+
+    .information{
+        margin: 0;
+        justify-content: space-between;
+        width: 750px;
+    }
+
+    .planet-card .overview-istructure-sgeology li{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 724px) {
+
 }
