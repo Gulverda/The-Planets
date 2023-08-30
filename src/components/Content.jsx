@@ -158,8 +158,13 @@ function Content({ selectedPlanet }) {
                     {activeSection === "INTERNAL_STRUCTURE" && (
                         <img src={selectedPlanetData.imgSrc1} alt={selectedPlanetData.title} />
                     )}
-                    {activeSection === "SUFRACE_GEOLOGY" && (
-                        <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
+                    {activeSection === "SURFACE_GEOLOGY" && (
+                        <div className="over-and-surface">
+                            <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
+                            <div className="geology-img">
+                                <img src={selectedPlanetData.imgSrc2} alt="" />
+                            </div>
+                        </div>
                     )}
                     </div>
                     <div className="planet-card">
