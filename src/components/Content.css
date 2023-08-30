@@ -147,3 +147,18 @@
     text-transform: uppercase;
     margin: 0 0 0 23px;
 }
+
+.over-and-surface{
+    position: absolute;
+    display: grid;
+    gap: 30px;
+}
+
+.geology-img{
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 50%;
+    margin-left: auto; 
+    margin-right: auto; 
+}
