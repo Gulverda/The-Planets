@@ -91,6 +91,10 @@
     align-items: center;
 }
 
+.source p{
+    height: auto;
+}
+
 .planet-card .overview-istructure-sgeology li:hover{
     border: 1px solid transparent;
     background: rgb(255, 255, 255, 0.2);
