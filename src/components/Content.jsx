@@ -160,35 +160,41 @@ function Content({ selectedPlanet }) {
             <div className="content">
                 <div className="main-content">
                     <div className="content-img">
-                    {activeSection === "OVERVIEW" && (
-                        <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
-                    )}
-                    {activeSection === "INTERNAL_STRUCTURE" && (
-                        <img src={selectedPlanetData.imgSrc1} alt={selectedPlanetData.title} />
-                    )}
-                    {activeSection === "SURFACE_GEOLOGY" && (
-                        <div className="over-and-surface">
+                        {activeSection === "OVERVIEW" && (
                             <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
-                            <div className="geology-img">
-                                <img src={selectedPlanetData.imgSrc2} alt="" />
+                        )}
+                        {activeSection === "INTERNAL_STRUCTURE" && (
+                            <img src={selectedPlanetData.imgSrc1} alt={selectedPlanetData.title} />
+                        )}
+                        {activeSection === "SURFACE_GEOLOGY" && (
+                            <div className="over-and-surface">
+                                <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
+                                <div className="geology-img">
+                                    <img src={selectedPlanetData.imgSrc2} alt="" />
+                                </div>
                             </div>
-                        </div>
-                    )}
+                        )}
                     </div>
                     <div className="planet-card">
                         <div className="title-and-description">
-                        <h2>{selectedPlanetData.title}</h2>
-                        {activeSection === "OVERVIEW" && (
-                            <p>{selectedPlanetData.description}</p>
-                        )}
-                        {activeSection === "INTERNAL_STRUCTURE" && (  
-                            <p>{selectedPlanetData.description1}</p>
-                        )}
-                        {activeSection === "SURFACE_GEOLOGY" && (  
-                            <p>{selectedPlanetData.description2}</p>
-                        )}
+                            <h2>{selectedPlanetData.title}</h2>
+                            {activeSection === "OVERVIEW" && (
+                                <p>{selectedPlanetData.description}</p>
+                            )}
+                            {activeSection === "INTERNAL_STRUCTURE" && (
+                                <p>{selectedPlanetData.description1}</p>
+                            )}
+                            {activeSection === "SURFACE_GEOLOGY" && (
+                                <p>{selectedPlanetData.description2}</p>
+                            )}
+                            <div className="source">
+                                <p>
+                                    Source: <a href={selectedPlanetData.wikipediaURL} target="_blank" rel="noopener noreferrer"> Wikipedia </a>
+                                </p>
+                            </div>
                         </div>
                         <div className="overview-istructure-sgeology">
+
                             <ul>
                                 <li onClick={() => setActiveSection("OVERVIEW")}><b>01</b> OVERVIEW</li>
                                 <li onClick={() => setActiveSection("INTERNAL_STRUCTURE")}><b>02</b> INTERNAL STRUCTURE</li>
