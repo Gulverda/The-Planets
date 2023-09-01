@@ -176,11 +176,6 @@
         width: 750px;
     }
 
-
-    /* .geology-img img{
-        max-width: 100%;
-    } */
-
     #info{
         width: 164px;
         height: 88px;
@@ -230,5 +225,74 @@
 }
 
 @media screen and (max-width: 724px) {
+    .planet-card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        position: relative;
+        top: 0;
+        margin-top: 0;
+    }
 
+    .overview-istructure-sgeology{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .planet-card .overview-istructure-sgeology ul{
+        /* margin: 0;
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        border-collapse: collapse;
+        justify-content: center;
+        width: 300px; */
+        display: none;
+    }
+
+    .planet-card ul{
+        /* position: absolute;
+        bottom: 200%; */
+        display: flex;
+    }
+
+    .title-and-description p{
+        font-size: 14.5px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .title-and-description h2{
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .information{
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .information label{
+        margin: 0;
+    }
+
+    .information p{
+        margin: 0;
+    }
+
+    #info{
+        width: 327px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .content-img img{
+        width: 80%;
+        margin-top: -200px;
+    }
 }
