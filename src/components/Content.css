@@ -21,8 +21,6 @@
     display: grid;
     width: auto;
     border-radius: 8px;
-    /* padding: 20px;
-    margin: 10px; */
 }
 
 .content-img{
@@ -164,6 +162,10 @@
     margin-right: auto; 
 }
 
+.for-responsive{
+    display: none;
+}
+
 @media screen and (max-width: 1100px) {
     #info{
         width: 230px;
@@ -241,19 +243,40 @@
     }
 
     .planet-card .overview-istructure-sgeology ul{
-        /* margin: 0;
-        display: flex;
-        flex-direction: row;
-        width: auto;
-        border-collapse: collapse;
-        justify-content: center;
-        width: 300px; */
         display: none;
     }
 
+    .for-responsive{
+        display: flex;
+        width: 100%;
+    }
+
+    .for-responsive ul{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .for-responsive li{
+        color: rgb(255, 255, 255, 0.2);
+        text-align: center;
+        font-family: League Spartan;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 1.929px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .for-responsive li:hover{
+        color: rgb(255, 255, 255);
+        transition: all 0.3s ease-in;
+    }
+    
+
     .planet-card ul{
-        /* position: absolute;
-        bottom: 200%; */
         display: flex;
     }
 
@@ -294,5 +317,10 @@
     .content-img img{
         width: 80%;
         margin-top: -200px;
+    }
+
+    .geology-img img{
+        width: 30%;
+        margin-top: -100px;
     }
 }
