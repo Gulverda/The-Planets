@@ -274,7 +274,10 @@
         color: rgb(255, 255, 255);
         transition: all 0.3s ease-in;
     }
-    
+
+    .planet-card p{
+        margin-left: 0;
+    }
 
     .planet-card ul{
         display: flex;
@@ -315,7 +318,7 @@
     }
 
     .content-img img{
-        width: 80%;
+        width: 60%;
         margin-top: -200px;
     }
 

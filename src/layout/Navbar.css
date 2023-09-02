@@ -44,6 +44,7 @@
 }
 
 .nav-links:hover{
+    border-top: 4px solid var(--planet-bordered-color);
     color: rgb(255, 255, 255, 1);
     transition: all ease-in 0.2s;
 }

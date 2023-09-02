@@ -29,17 +29,6 @@ import NeptuneGeology from './images/Neptune-Geology.svg';
 function Content({ selectedPlanet }) {
     const [activeSection, setActiveSection] = useState("OVERVIEW");
 
-    const planetBorderColors = {
-        MERCURY: "red",
-        VENUS: "green",
-        EARTH: "blue",
-        MARS: "orange",
-        JUPITER: "purple",
-        SATURN: "pink",
-        URANUS: "cyan",
-        NEPTUNE: "teal",
-    };
-
     const planets = [
         {
             id: 1,
@@ -165,10 +154,9 @@ function Content({ selectedPlanet }) {
 
     const defaultPlanet = planets.find(planet => planet.title === 'MERCURY');
     const selectedPlanetData = selectedPlanet ? planets.find(planet => planet.title === selectedPlanet) : defaultPlanet;
-
     return (
         <main>
-            <div className="content">
+            <div className="content" >
                 <div className="for-responsive">
                     <ul>
                         <li onClick={() => setActiveSection("OVERVIEW")}>OVERVIEW</li>
