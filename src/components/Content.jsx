@@ -29,6 +29,17 @@ import NeptuneGeology from './images/Neptune-Geology.svg';
 function Content({ selectedPlanet }) {
     const [activeSection, setActiveSection] = useState("OVERVIEW");
 
+    const planetBorderColors = {
+        MERCURY: "red",
+        VENUS: "green",
+        EARTH: "blue",
+        MARS: "orange",
+        JUPITER: "purple",
+        SATURN: "pink",
+        URANUS: "cyan",
+        NEPTUNE: "teal",
+    };
+
     const planets = [
         {
             id: 1,
@@ -158,7 +169,15 @@ function Content({ selectedPlanet }) {
     return (
         <main>
             <div className="content">
+                <div className="for-responsive">
+                    <ul>
+                        <li onClick={() => setActiveSection("OVERVIEW")}>OVERVIEW</li>
+                        <li onClick={() => setActiveSection("INTERNAL_STRUCTURE")}>INTERNAL</li>
+                        <li onClick={() => setActiveSection("SURFACE_GEOLOGY")}>SURFACE</li>
+                    </ul>
+                </div>
                 <div className="main-content">
+
                     <div className="content-img">
                         {activeSection === "OVERVIEW" && (
                             <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
@@ -168,6 +187,7 @@ function Content({ selectedPlanet }) {
                         )}
                         {activeSection === "SURFACE_GEOLOGY" && (
                             <div className="over-and-surface">
+
                                 <img src={selectedPlanetData.imgSrc} alt={selectedPlanetData.title} />
                                 <div className="geology-img">
                                     <img src={selectedPlanetData.imgSrc2} alt="" />
@@ -175,6 +195,7 @@ function Content({ selectedPlanet }) {
                             </div>
                         )}
                     </div>
+
                     <div className="planet-card">
                         <div className="title-and-description">
                             <h2>{selectedPlanetData.title}</h2>
@@ -187,14 +208,15 @@ function Content({ selectedPlanet }) {
                             {activeSection === "SURFACE_GEOLOGY" && (
                                 <p>{selectedPlanetData.description2}</p>
                             )}
+
                             <div className="source">
                                 <p>
                                     Source: <a href={selectedPlanetData.wikipediaURL} target="_blank" rel="noopener noreferrer"> Wikipedia </a>
                                 </p>
                             </div>
                         </div>
-                        <div className="overview-istructure-sgeology">
 
+                        <div className="overview-istructure-sgeology">
                             <ul>
                                 <li onClick={() => setActiveSection("OVERVIEW")}><b>01</b> OVERVIEW</li>
                                 <li onClick={() => setActiveSection("INTERNAL_STRUCTURE")}><b>02</b> INTERNAL STRUCTURE</li>
