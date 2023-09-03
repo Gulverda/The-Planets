@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Content.css";
+import Link from './images/external-link-square-with-an-arrow-in-right-diagonal.svg'
 import MercuryImage from './images/Mercury.png';
 import VenusImage from './images/Venus.png';
 import EarthImage from './images/Earth.png';
@@ -154,14 +155,15 @@ function Content({ selectedPlanet }) {
 
     const defaultPlanet = planets.find(planet => planet.title === 'MERCURY');
     const selectedPlanetData = selectedPlanet ? planets.find(planet => planet.title === selectedPlanet) : defaultPlanet;
+    
     return (
         <main>
             <div className="content" >
                 <div className="for-responsive">
                     <ul>
-                        <li onClick={() => setActiveSection("OVERVIEW")}>OVERVIEW</li>
-                        <li onClick={() => setActiveSection("INTERNAL_STRUCTURE")}>INTERNAL</li>
-                        <li onClick={() => setActiveSection("SURFACE_GEOLOGY")}>SURFACE</li>
+                        <li onClick={() => setActiveSection("OVERVIEW")} className={activeSection === "OVERVIEW" ? "active" : ""}>OVERVIEW</li>
+                        <li onClick={() => setActiveSection("INTERNAL_STRUCTURE")} className={activeSection === "INTERNAL_STRUCTURE" ? "active" : ""}>INTERNAL</li>
+                        <li onClick={() => setActiveSection("SURFACE_GEOLOGY")} className={activeSection === "SURFACE_GEOLOGY" ? "active" : ""}>SURFACE</li>
                     </ul>
                 </div>
                 <div className="main-content">
@@ -199,16 +201,16 @@ function Content({ selectedPlanet }) {
 
                             <div className="source">
                                 <p>
-                                    Source: <a href={selectedPlanetData.wikipediaURL} target="_blank" rel="noopener noreferrer"> Wikipedia </a>
+                                    Source: <a href={selectedPlanetData.wikipediaURL} target="_blank" rel="noopener noreferrer"> Wikipedia <img src={Link} alt="" /> </a>
                                 </p>
                             </div>
                         </div>
 
                         <div className="overview-istructure-sgeology">
                             <ul>
-                                <li onClick={() => setActiveSection("OVERVIEW")}><b>01</b> OVERVIEW</li>
-                                <li onClick={() => setActiveSection("INTERNAL_STRUCTURE")}><b>02</b> INTERNAL STRUCTURE</li>
-                                <li onClick={() => setActiveSection("SURFACE_GEOLOGY")}><b>03</b> SURFACE GEOLOGY</li>
+                                <li onClick={() => setActiveSection("OVERVIEW")} className={activeSection === "OVERVIEW" ? "active" : ""}><b>01</b> OVERVIEW</li>
+                                <li onClick={() => setActiveSection("INTERNAL_STRUCTURE")} className={activeSection === "INTERNAL_STRUCTURE" ? "active" : ""}><b>02</b> INTERNAL STRUCTURE</li>
+                                <li onClick={() => setActiveSection("SURFACE_GEOLOGY")} className={activeSection === "SURFACE_GEOLOGY" ? "active" : ""}><b>03</b> SURFACE GEOLOGY</li>
                             </ul>
                         </div>
                     </div>

@@ -89,8 +89,28 @@
     align-items: center;
 }
 
+.planet-card .overview-istructure-sgeology li.active{
+    background-color: var(--planet-bordered-color);
+}
+
+.source img{
+    margin: 0;
+}
+
 .source p{
     height: auto;
+    margin-top: 0px;
+}
+
+.source a{
+    opacity: 0.5;
+    color: #FFF;
+    font-family: League Spartan;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    text-decoration-line: underline;
 }
 
 .planet-card .overview-istructure-sgeology li:hover{
@@ -164,6 +184,17 @@
 
 .for-responsive{
     display: none;
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2) ;
+    width: 100;
+}
+
+.for-responsive ul{
+    height: 25px;
+}
+
+.for-responsive li.active{
+    border-bottom: 4px solid var(--planet-bordered-color);
+    color: #FFF;
 }
 
 @media screen and (max-width: 1100px) {
@@ -317,13 +348,16 @@
         padding: 0 10px;
     }
 
+    .content-img{
+        height: 200px;
+    }
+
     .content-img img{
         width: 60%;
-        margin-top: -200px;
+        margin-top: -100px;
     }
 
     .geology-img img{
-        width: 30%;
-        margin-top: -100px;
+        width: 20%;
     }
 }
