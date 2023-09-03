@@ -36,11 +36,12 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 25px; /* 227.273% */
+    line-height: 25px; 
     letter-spacing: 1px;
     background: none;
     border: none;
     cursor: pointer;
+    height: 20px;
 }
 
 .nav-links:hover{
