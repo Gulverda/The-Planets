@@ -168,9 +168,12 @@
 
 .over-and-surface{
     justify-content: center;
+    align-items: center;
     position: absolute;
     display: flex;
     gap: 30px;
+    height: auto;
+    margin-top: 10px;
 }
 
 .geology-img{
@@ -185,7 +188,7 @@
 .for-responsive{
     display: none;
     border-bottom: 1px solid rgb(255, 255, 255, 0.2) ;
-    width: 100;
+    width: 100%;
 }
 
 .for-responsive ul{
@@ -282,6 +285,8 @@
     }
 
     .for-responsive{
+        position: absolute;
+        z-index: 3;
         display: flex;
         width: 100%;
     }
@@ -363,7 +368,19 @@
     }
 
     .geology-img img{
-        width: 25%;
+        width: 80px;
         margin-top: 70px;
     }
 }
+
+/* @media screen and (max-width: 724px){
+    .content-img img{
+        width: 42%;
+        margin-top: 95px;
+    }
+    
+    .geology-img img{
+        width: 25%;
+        margin-top: 70px;
+    }
+} */
