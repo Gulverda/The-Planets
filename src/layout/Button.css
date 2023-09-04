@@ -55,7 +55,8 @@
         transition: all 0.5s ease;
         z-index: 1;
         text-align: center;
-        height: 500px;
+        margin-top: 55px;
+        height: 450px;
     }
 
     .nav-menu.active li{
@@ -92,9 +93,7 @@
         position: relative;
         top: 0;
         right: 24px;
-        /* transform: translate(-50%, 30%); */
         font-size: 1.8rem;
         cursor: pointer;
-        /* margin-top: -24px; */
     }
 }
