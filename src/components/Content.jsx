@@ -3,6 +3,7 @@ import "./Content.css";
 import Link from './images/external-link-square-with-an-arrow-in-right-diagonal.svg';
 import planets from "./Data";
 
+
 function Content({ selectedPlanet }) {
     const [activeSection, setActiveSection] = useState("OVERVIEW");
 
