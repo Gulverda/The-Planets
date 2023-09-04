@@ -12,49 +12,57 @@ const MenuItems = [
     title: 'MERCURY',
     url: '#',
     cName: 'nav-links',
-    imgSrc: MercuryImage
+    imgSrc: MercuryImage,
+    color: '#419EBB',
   },
   {
     title: 'VENUS',
     url: '#',
     cName: 'nav-links',
-    imgSrc: VenusImage // Use the imported module directly
+    imgSrc: VenusImage,
+    color: '#EDA249', // Use the imported module directly
   },
   {
     title: 'EARTH',
     url: '#',
     cName: 'nav-links',
-    imgSrc: EarthImage
+    imgSrc: EarthImage,
+    color: '#6D2ED5',
   },
   {
     title: 'MARS',
     url: '#',
     cName: 'nav-links',
-    imgSrc: MarsImage
+    imgSrc: MarsImage,
+    color: '#D14C32',
   },
   {
     title: 'JUPITER',
     url: '#',
     cName: 'nav-links',
-    imgSrc: JupiterImage
+    imgSrc: JupiterImage,
+    color: '#D83A34',
   },
   {
     title: 'SATURN',
     url: '#',
     cName: 'nav-links',
-    imgSrc: SaturnImage
+    imgSrc: SaturnImage,
+    color: '#CD5120',
   },
   {
     title: 'URANUS',
     url: '#',
     cName: 'nav-links',
-    imgSrc: UranusImage
+    imgSrc: UranusImage,
+    color: '#1EC1A2',
   },
   {
     title: 'NEPTUNE',
     url: '#',
     cName: 'nav-links',
-    imgSrc: NeptuneImage // Use the imported module directly
+    imgSrc: NeptuneImage,
+    color: '#2D68F0', // Use the imported module directly
   }
 ];
 

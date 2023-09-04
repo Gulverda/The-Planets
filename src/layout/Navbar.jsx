@@ -4,28 +4,16 @@ import './Navbar.css';
 import './Button.css';
 import Logo from './images/logo.svg';
 
-const planetBorderColors = {
-  MERCURY: "#419EBB",
-  VENUS: "#EDA249",
-  EARTH: "#6D2ED5",
-  MARS: "#D14C32",
-  JUPITER: "#D83A34",
-  SATURN: "#CD5120",
-  URANUS: "#1EC1A2",
-  NEPTUNE: "#2D68F0",
-};
-
 class Navbar extends Component {
   state = {
     clicked: false,
-    selectedPlanet: 'MERCURY', // Set the initial selected planet to 'MERCURY'
-    activePlanet: 'MERCURY',  // Store the currently active planet
+    selectedPlanet: 'MERCURY',
+    activePlanet: 'MERCURY',
   };
 
   componentDidMount() {
     // Set the initial custom properties for styling
-    document.documentElement.style.setProperty("--nav-link-color", planetBorderColors['MERCURY']);
-    document.documentElement.style.setProperty("--planet-bordered-color", planetBorderColors['MERCURY']);
+    this.updateCustomProperties('MERCURY');
   }
 
   handleClick = () => {
@@ -35,17 +23,27 @@ class Navbar extends Component {
   handlePlanetClick = (planetTitle) => {
     this.setState({ selectedPlanet: planetTitle });
 
-    // Update the custom property value for nav-link color
-    document.documentElement.style.setProperty("--nav-link-color", planetBorderColors[planetTitle]);
-
-    // Update the custom property value for planet-bordered-color
-    document.documentElement.style.setProperty("--planet-bordered-color", planetBorderColors[planetTitle]);
+    // Update the custom property values for nav-link color and planet-bordered-color
+    this.updateCustomProperties(planetTitle);
 
     // Set the active planet to the newly selected planet
     this.setState({ activePlanet: planetTitle });
 
     this.props.onSelectPlanet(planetTitle);
     this.setState({ clicked: false });
+  }
+
+  updateCustomProperties = (planetTitle) => {
+    // Find the selected planet in the MenuItems array
+    const selectedPlanet = MenuItems.find((item) => item.title === planetTitle);
+
+    if (selectedPlanet) {
+      // Update the custom property value for nav-link color
+      document.documentElement.style.setProperty("--nav-link-color", selectedPlanet.color);
+
+      // Update the custom property value for planet-bordered-color
+      document.documentElement.style.setProperty("--planet-bordered-color", selectedPlanet.color);
+    }
   }
 
   render() {
@@ -55,13 +53,13 @@ class Navbar extends Component {
           <img src={Logo} alt="logo" />
         </h1>
         <div className="menu-icon" onClick={this.handleClick}>
-          <i className={this.state.clicked ? 'fa fa-times' : 'fas fa-bars'}></i>
+          <i className={`fas fa-bars ${this.state.clicked ? 'active' : ''}`} style={{ color: this.state.clicked ? 'rgba(255,255,255, 0.2)' : 'white' }}></i>
         </div>
         <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
           {MenuItems.map((item) => (
             <li key={item.title}>
               <button
-                className={item.cName}
+                className={`nav-link ${item.cName} ${this.state.activePlanet === item.title ? 'active' : ''}`}
                 onClick={() => this.handlePlanetClick(item.title)}
               >
                 <img id='Round' src={item.imgSrc} alt="" />
