@@ -89,12 +89,12 @@
 
     .menu-icon{
         display: block;
-        position: absolute;
+        position: relative;
         top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
+        right: 24px;
+        /* transform: translate(-50%, 30%); */
         font-size: 1.8rem;
         cursor: pointer;
-        margin-top: -30px;
+        /* margin-top: -24px; */
     }
 }
