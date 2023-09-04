@@ -110,4 +110,8 @@
         margin-top: 16px;
         padding: 0 0 16px 0;
     }
+
+    .nav-links.active{
+        border-top: none;
+    }
 }
