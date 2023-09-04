@@ -44,7 +44,7 @@
     height: 20px;
 }
 
-.nav-links:hover{
+.nav-links.active{
     border-top: 4px solid var(--planet-bordered-color);
     color: rgb(255, 255, 255, 1);
     transition: all ease-in 0.2s;
@@ -68,6 +68,7 @@
 .fa-times{
     color: rgb(255, 255, 255);
 }
+
 
 #Round{
     display: none;
