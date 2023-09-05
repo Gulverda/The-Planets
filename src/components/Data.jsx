@@ -14,14 +14,14 @@ import Guts4 from './images/Guts4.svg';
 import Guts5 from './images/Guts5.svg';
 import Guts6 from './images/Guts6.svg';
 import Guts7 from './images/Guts7.svg';
-import MercuryGeology from './images/Mercury-Geology.svg';
-import VenusGeology from './images/Venus-Geology.svg';
-import EarthGeology from './images/Earth-Geology.svg';
-import MarsGeology from './images/Mars-Geology.svg';
-import JupiterGeology from './images/Jupiter-Geology.svg';
-import SaturnGeology from './images/Saturn-Geology.svg';
-import UranusGeology from './images/Uranus-Geology.svg';
-import NeptuneGeology from './images/Neptune-Geology.svg';
+import MercuryGeology from './images/Mercury-Geology.png';
+import VenusGeology from './images/Venus-Geology.png';
+import EarthGeology from './images/Earth-Geology.png';
+import MarsGeology from './images/Mars-Geology.png';
+import JupiterGeology from './images/Jupiter-Geology.png';
+import SaturnGeology from './images/Saturn-Geology.png';
+import UranusGeology from './images/Uranus-Geology.png';
+import NeptuneGeology from './images/Neptune-Geology.png';
 
 const planets = [
     {
