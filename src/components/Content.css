@@ -185,6 +185,11 @@
     margin-right: auto; 
 }
 
+.geology-img img{
+    width: 200px;
+}
+
+
 .for-responsive{
     display: none;
     border-bottom: 1px solid rgb(255, 255, 255, 0.2) ;
